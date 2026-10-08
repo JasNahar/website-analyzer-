@@ -1,0 +1,30 @@
+# Dependency and editor ignores
+
+This file keeps the repository clean for common local development artifacts.
+
+```gitignore
+# Node / JavaScript
+node_modules/
+.npm/
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Build output
+build/
+dist/
+out/
+coverage/
+.pytest_cache/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+```
