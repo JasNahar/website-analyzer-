@@ -118,7 +118,7 @@ sleeps after 15 idle minutes and takes about a minute to wake up.
 |---|---|
 | `GOOGLE_API_KEY` (or `GEMINI_API_KEY`) | Enables the Gemini agent, the summary and the embeddings |
 | `GROQ_API_KEY` | Optional Groq (Llama 3.3) fallback |
-| `GEMINI_MODELS` | Comma-separated order to try models in. Default: `gemini-3.5-flash,gemini-3.6-flash,gemini-3.1-flash-lite,gemini-3.5-flash-lite` |
+| `GEMINI_MODELS` | Comma-separated order to try models in. Default: `gemini-3.5-flash,gemini-3.1-flash-lite,gemini-3.6-flash,gemini-3.5-flash-lite` |
 | `SESSION_TOKEN_BUDGET` | Maximum LLM tokens per analysed site (default 150000) |
 
 ## API

@@ -22,7 +22,7 @@ log = logging.getLogger("websage.agent")
 
 # Tried in order: free-tier Gemini models are often "high demand" (503), so several fallbacks help.
 GEMINI_MODELS = [m.strip() for m in os.getenv(
-    "GEMINI_MODELS", "gemini-3.5-flash,gemini-3.6-flash,gemini-3.1-flash-lite,gemini-3.5-flash-lite").split(",") if m.strip()]
+    "GEMINI_MODELS", "gemini-3.5-flash,gemini-3.1-flash-lite,gemini-3.6-flash,gemini-3.5-flash-lite").split(",") if m.strip()]
 GROQ_MODEL = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
 SESSION_TOKEN_BUDGET = int(os.getenv("SESSION_TOKEN_BUDGET", "150000"))
 MAX_AGENT_STEPS = 12  # LangGraph recursion limit (each tool call is two steps)
@@ -46,7 +46,7 @@ def make_llms() -> list[tuple[str, object]]:
 
         for model in GEMINI_MODELS:
             llms.append((f"Gemini ({model})", ChatGoogleGenerativeAI(
-                model=model, google_api_key=google_key(), temperature=0.2, max_retries=0, timeout=25)))
+                model=model, google_api_key=google_key(), temperature=0.2, max_retries=0, timeout=15)))
     if os.getenv("GROQ_API_KEY"):
         from langchain_groq import ChatGroq
 
