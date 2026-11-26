@@ -1,0 +1,10 @@
+fastapi==0.165.0
+uvicorn==0.54.0
+httpx==0.28.1
+beautifulsoup4==4.15.0
+langchain-core==1.8.5
+langgraph==1.2.24
+langchain-google-genai==4.5.3
+langchain-groq==1.2.1
+chromadb==1.5.9
+pytest==9.2.0

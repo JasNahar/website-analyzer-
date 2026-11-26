@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: websage
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/status
+    envVars:
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: PORT
+        value: "7860"
