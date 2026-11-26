@@ -1,5 +1,7 @@
 # WebSage – Agentic AI Website Analyzer
 
+[![Live demo](https://img.shields.io/badge/Live%20demo-website--analyzer--y8e1.onrender.com-2c5f8a?style=for-the-badge)](https://website-analyzer-y8e1.onrender.com)
+
 ![Python](https://img.shields.io/badge/Python-3.11-blue) ![FastAPI](https://img.shields.io/badge/FastAPI-API-009688) ![LangGraph](https://img.shields.io/badge/LangGraph-ReAct%20agent-1c3c3c) ![ChromaDB](https://img.shields.io/badge/ChromaDB-vector%20store-orange) ![Gemini](https://img.shields.io/badge/Google-Gemini-4285F4) ![React](https://img.shields.io/badge/React-19-61dafb)
 
 WebSage is an agentic AI website analyzer. Enter a URL and a team of agents crawls the site, runs SEO,
@@ -7,13 +9,17 @@ accessibility, performance, security-header and link-integrity checks, and write
 Then you can ask follow-up questions in a chat. A ReAct agent decides which tools to call, and its answers
 are grounded in the site's own content through Retrieval-Augmented Generation (RAG).
 
-**Live demo: https://website-analyzer-y8e1.onrender.com**
+### 🔗 Live demo: [website-analyzer-y8e1.onrender.com](https://website-analyzer-y8e1.onrender.com)
 
 > Hosted on Render's free plan, so the first visit after 15 idle minutes can take about a minute while the server wakes up.
+
+![Home screen](docs/screenshots/home.png)
 
 | Analysis report | RAG follow-up Q&A |
 |---|---|
 | ![Report screen](docs/screenshots/report.png) | ![Chat screen](docs/screenshots/chat.png) |
+
+**Try it:** open the [live demo](https://website-analyzer-y8e1.onrender.com), enter a URL such as `python.org`, wait for the report, then click **Ask about this website** and ask "What should I fix first?".
 
 ## Features
 
@@ -106,6 +112,10 @@ docker run -p 7860:7860 -e GOOGLE_API_KEY=your-key websage   # open http://local
 Run the tests from the repository root with `pytest tests`.
 
 ## Deploy
+
+The project is deployed on Render at **https://website-analyzer-y8e1.onrender.com** (Docker web service, free plan, with `GOOGLE_API_KEY` set under Environment).
+
+To deploy your own copy:
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/JasNahar/website-analyzer-)
 
