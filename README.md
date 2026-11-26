@@ -7,7 +7,9 @@ accessibility, performance, security-header and link-integrity checks, and write
 Then you can ask follow-up questions in a chat. A ReAct agent decides which tools to call, and its answers
 are grounded in the site's own content through Retrieval-Augmented Generation (RAG).
 
-**Live demo:** _link coming once the Render deploy finishes_
+**Live demo: https://website-analyzer-y8e1.onrender.com**
+
+> Hosted on Render's free plan, so the first visit after 15 idle minutes can take about a minute while the server wakes up.
 
 | Analysis report | RAG follow-up Q&A |
 |---|---|
